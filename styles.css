@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #FF5B5B;
+    --secondary-color: #5D87FF;
+    --success-color: #29CC97;
+    --warning-color: #FFB648;
+    --danger-color: #F65364;
+    --purple-color: #8E54E9;
+    
+    --light-bg: #f8f9fa;
+    --dark-bg: #282c34;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #343a40;
+    
+    --text-light: #495057;
+    --text-dark: #e9ecef;
+    --text-muted-light: #6c757d;
+    --text-muted-dark: #adb5bd;
+    
+    --border-light: #dee2e6;
+    --border-dark: #495057;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.theme-light {
+    background-color: var(--light-bg);
+    color: var(--text-light);
+}
+
+.theme-dark {
+    background-color: var(--dark-bg);
+    color: var(--text-dark);
+}
+
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding-left: 40px;
+    border-radius: 30px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted-light);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar {
+    background-color: var(--card-bg-light);
+    border-right: 1px solid var(--border-light);
+    min-height: calc(100vh - 56px);
+}
+
+.sidebar-item {
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-item:hover, .sidebar-item.active {
+    background-color: rgba(255, 91, 91, 0.1);
+    color: var(--primary-color);
+}
+
+.badge-success {
+    background-color: rgba(41, 204, 151, 0.1);
+    color: var(--success-color);
+}
+
+.badge-danger {
+    background-color: rgba(246, 83, 100, 0.1);
+    color: var(--danger-color);
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+}
+
+.progress-bar-purple {
+    background-color: var(--orange-color);
+}
+
+.activity-item {
+    border-left: 2px solid transparent;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.activity-item:hover {
+    border-left-color: var(--primary-color);
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-blue {
+    background-color: rgba(93, 135, 255, 0.1);
+    color: var(--secondary-color);
+}
+
+.icon-orange {
+    background-color: rgba(255, 91, 91, 0.1);
+    color: var(--primary-color);
+}
+
+.icon-green {
+    background-color: rgba(41, 204, 151, 0.1);
+    color: var(--success-color);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+}
